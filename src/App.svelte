@@ -54,15 +54,9 @@ window.addEventListener('load', function load() {
 			const loader = document.getElementById('loader');
 			loader.parentNode.removeChild(loader);
 });
-
-
 </script>
 
-<body class="app">
-
-	<Container />
-
-	<div id='loader'>
-		<div class="spinner"></div>
-	</div>
-</body>
+<Container />
+<div id='loader'>
+	<div class="spinner"></div>
+</div>
