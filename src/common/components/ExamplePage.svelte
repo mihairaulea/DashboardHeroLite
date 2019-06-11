@@ -5,15 +5,15 @@ import MenuDrawer from './MenuDrawer.svelte'
 
 
 <MenuDrawer />
-<div className="page-container">
+<div class="page-container">
 <TopBar />
 <div>
-<main className="main-content bgc-grey-100">
+<main class="main-content bgc-grey-100">
         <div id="mainContent">
-          <div className="filters-bar">
-            <ul className="nav-left">
+          <div class="filters-bar">
+            <ul class="nav-left">
               <li>
-                <h1 className="top-title">Brand</h1>
+                <h1 class="top-title">Brand</h1>
               </li>
             </ul>
           </div>

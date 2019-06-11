@@ -48,15 +48,16 @@
 </style>
 
 <script>
-import Container from './Container.svelte'
+import Container from './Container.svelte';
 console.log("START");
 window.addEventListener('load', function load() {
 			const loader = document.getElementById('loader');
 			loader.parentNode.removeChild(loader);
 });
 </script>
-
+<body class="app">
 <Container />
 <div id='loader'>
 	<div class="spinner"></div>
 </div>
+</body>
