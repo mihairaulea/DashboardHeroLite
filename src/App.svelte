@@ -48,7 +48,8 @@
 </style>
 
 <script>
-import Container from './Container.svelte';
+//import Container from './Container.svelte';
+import Grid from './common/components/Grid.svelte';
 console.log("START");
 window.addEventListener('load', function load() {
 			const loader = document.getElementById('loader');
@@ -56,7 +57,9 @@ window.addEventListener('load', function load() {
 });
 </script>
 <body class="app">
-<Container />
+	Before Grid
+<Grid />
+	After Grid
 <div id='loader'>
 	<div class="spinner"></div>
 </div>
