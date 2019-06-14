@@ -60,7 +60,7 @@ window.addEventListener('load', function load() {
 });
 </script>
 <body class="app">
-
+<Dashboard />
 <div id='loader'>
 	<div class="spinner"></div>
 </div>

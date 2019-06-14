@@ -46,14 +46,6 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class='sidebar-link' href="compose.html">
-          <span class="icon-holder">
-            <i class="c-blue-500 ti-share"></i>
-          </span>
-          <span class="title">Compose</span>
-        </a>
-      </li>
-      <li class="nav-item">
         <a class='sidebar-link' href="calendar.html">
           <span class="icon-holder">
             <i class="c-deep-orange-500 ti-calendar"></i>
@@ -109,25 +101,6 @@
           </li>
           <li>
             <a class='sidebar-link' href="datatable.html">Data Table</a>
-          </li>
-        </ul>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="dropdown-toggle" href="javascript:void(0);">
-          <span class="icon-holder">
-              <i class="c-purple-500 ti-map"></i>
-            </span>
-          <span class="title">Maps</span>
-          <span class="arrow">
-              <i class="ti-angle-right"></i>
-            </span>
-        </a>
-        <ul class="dropdown-menu">
-          <li>
-            <a href="google-maps.html">Google Map</a>
-          </li>
-          <li>
-            <a href="vector-maps.html">Vector Map</a>
           </li>
         </ul>
       </li>
