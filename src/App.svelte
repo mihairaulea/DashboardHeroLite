@@ -49,17 +49,18 @@
 
 <script>
 //import Container from './Container.svelte';
-import Grid from './common/components/Grid.svelte';
-console.log("START");
+import Register from './common/pages/Register.svelte';
+import Login from './common/pages/Login.svelte';
+import Dashboard from './common/pages/Dashboard.svelte';
+
+console.log("START NEXT");
 window.addEventListener('load', function load() {
 			const loader = document.getElementById('loader');
 			loader.parentNode.removeChild(loader);
 });
 </script>
 <body class="app">
-	Before Grid
-<Grid />
-	After Grid
+
 <div id='loader'>
 	<div class="spinner"></div>
 </div>
