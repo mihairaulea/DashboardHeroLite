@@ -48,10 +48,12 @@
 </style>
 
 <script>
-//import Container from './Container.svelte';
-import Register from './common/pages/Register.svelte';
-import Login from './common/pages/Login.svelte';
-import Dashboard from './common/pages/Dashboard.svelte';
+import UserContainer from './common/containers/UserContainer.svelte';
+import ContentContainer from './common/containers/ContentContainer.svelte';
+import firebaseInstance from './common/resources/firebase/index.js';
+
+let loggedIn = firebaseInstance.getCurrentUserId() == null ? false : true;
+console.log(loggedIn+ " this is value of loggedin");
 
 console.log("START NEXT");
 window.addEventListener('load', function load() {
@@ -60,7 +62,15 @@ window.addEventListener('load', function load() {
 });
 </script>
 <body class="app">
-<Dashboard />
+
+	{#if loggedIn}
+	<ContentContainer />
+	{/if}
+
+	{#if !loggedIn}
+	<UserContainer bind:loggedIn={loggedIn}/>
+	{/if}
+
 <div id='loader'>
 	<div class="spinner"></div>
 </div>

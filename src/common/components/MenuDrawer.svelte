@@ -1,3 +1,9 @@
+<script>
+
+import { Link } from "svelte-routing";
+
+</script>
+
 <div class="sidebar">
   <div class="sidebar-inner">
     <!-- ### $Sidebar Header ### -->
@@ -12,7 +18,7 @@
                 </div>
               </div>
               <div class="peer peer-greed">
-                <h5 class="lh-1 mB-0 logo-text">Adminator</h5>
+                <h5 class="lh-1 mB-0 logo-text">DashboardHero</h5>
               </div>
             </div>
           </a>
@@ -26,39 +32,47 @@
         </div>
       </div>
     </div>
-
     <!-- ### $Sidebar Menu ### -->
     <ul class="sidebar-menu scrollable pos-r">
+
       <li class="nav-item mT-30 actived">
-        <a class="sidebar-link" href="index.html">
+        <a class='sidebar-link'>
           <span class="icon-holder">
-            <i class="c-blue-500 ti-home"></i>
+            <i class="c-brown-500 ti-home"></i>
           </span>
-          <span class="title">Dashboard</span>
+          <span class="title">
+            <Link to="/">Dashboard</Link>
+          </span>
         </a>
       </li>
       <li class="nav-item">
-        <a class='sidebar-link' href="email.html">
+        <a class='sidebar-link'>
           <span class="icon-holder">
             <i class="c-brown-500 ti-email"></i>
           </span>
-          <span class="title">Email</span>
+          <span class="title">
+            <Link to="email">Email</Link>
+          </span>
         </a>
       </li>
       <li class="nav-item">
-        <a class='sidebar-link' href="calendar.html">
+        <a class='sidebar-link'>
           <span class="icon-holder">
             <i class="c-deep-orange-500 ti-calendar"></i>
           </span>
-          <span class="title">Calendar</span>
+          <span class="title">
+            <Link to="calendar">Calendar</Link>
+          </span>
         </a>
       </li>
       <li class="nav-item">
-        <a class='sidebar-link' href="chat.html">
+        <a class='sidebar-link'>
           <span class="icon-holder">
             <i class="c-deep-purple-500 ti-comment-alt"></i>
           </span>
-          <span class="title">Chat</span>
+          <span class="title">
+            <Link to="chat">Chat</Link>
+          </span>
         </a>
       </li>
       <li class="nav-item">

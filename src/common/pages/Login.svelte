@@ -1,6 +1,9 @@
 <script>
 
 import firebaseInstance from '../resources/firebase/index.js';
+import { Link } from "svelte-routing";
+
+export let loggedIn = false;
 
 function requestLogin() {
   var email    = document.getElementById("email").value;
@@ -8,13 +11,26 @@ function requestLogin() {
 
   firebaseInstance.signInWithCredentials(email, password).then(function() {
       console.log("logged in!");
+      loggedIn = true;
   }).catch(function(error) {
     console.log(error);
+    displayError(error);
   });
 
-  }
+}
 
-console.log("Loginnn");
+function signinFacebook() {
+  console.log("sign in facebook");
+}
+
+function signinGoogle() {
+  console.log("sign in google");
+}
+
+function displayError(message) {
+  document.getElementById("errorMessage").style.display = "initial";
+  document.getElementById("errorMessage").innerHTML = message;
+}
 
 </script>
 
@@ -29,6 +45,10 @@ console.log("Loginnn");
   </div>
   <div class="col-12 col-md-4 peer pX-40 pY-80 h-100 bgc-white scrollable pos-r" style='min-width: 320px;'>
     <h4 class="fw-300 c-grey-900 mB-40">Login</h4>
+
+    <div id="errorMessage" class="alert alert-danger" role="alert" style="display: none; padding:17px">
+                          Email address not valid!
+    </div>
     <div>
       <div class="form-group">
         <label class="text-normal text-dark">Email</label>
@@ -54,5 +74,26 @@ console.log("Loginnn");
         </div>
       </div>
     </div>
+
+
+    <div class="peer" style='padding: 7px;'>
+    <button
+          type="button"
+          class="btn cur-p btn-primary"
+          on:click={signinFacebook}
+        >Login with Facebook</button>
+    </div>
+    <div class="peer" style='padding: 7px;'>
+        <button
+          type="button"
+          class="btn cur-p btn-danger"
+          onClick={signinGoogle}
+        >Login with Google</button>
+    </div>
+
+    <div class="peer" style='padding: 7px;'>
+      <Link to="/register"><button type="button" class="btn cur-p btn-secondary">No account? Register now!</button></Link>
+    </div>
+
   </div>
 </div>
