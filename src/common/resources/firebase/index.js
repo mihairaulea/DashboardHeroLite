@@ -1,5 +1,5 @@
 import firebase from 'firebase/app';
-import 'firebase/auth';
+import auth from 'firebase/auth';
 import 'firebase/firestore';
 import 'firebase/database';
 
@@ -26,50 +26,37 @@ class FirebaseClass {
     return this.app.auth().currentUser;
   }
   // New user registration with Email + Password
-
   createUserWithCredentials(email, password) {
     return this.auth.createUserWithEmailAndPassword(email, password);
   };
 
   // Authentication
-
   signInWithCredentials(email, password) {
     return this.auth.signInWithEmailAndPassword(email, password);
   };
-/*
-  // Authentication Google
 
-  signInWithGoogle = () => {
-    const provider = new app.auth.GoogleAuthProvider();
-    // provider.addScope('https://www.googleapis.com/auth/gmail.compose');
+  // Authentication Google
+  signInWithGoogle() {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    provider.addScope('https://www.googleapis.com/auth/gmail.compose');
     return this.auth.signInWithPopup(provider);
   };
 
   // Authentication Facebook
-
-  signInWithFacebook = () => {
-    const provider = new app.auth.FacebookAuthProvider();
-    // provider.addScope('email');
-    // provider.addScope('ads_management');
+  signInWithFacebook() {
+    const provider = new firebase.auth.FacebookAuthProvider();
     return this.auth.signInWithPopup(provider);
   };
 
   // User sign out
-
-  signout = () => this.auth.signOut();
+  signout() {
+    this.auth.signOut();
+  }
 
   // Password reset
-
-  passwordReset = email => this.auth.sendPasswordResetEmail(email);
-
-  // Create new user record
-
-  addUser = (userId, displayName, email, photoURL) => {
-    const cloudFunc = this.functions.httpsCallable('addUser');
-    return cloudFunc({
-      userId, displayName, email, photoURL,
-    });
-  };*/
+  passwordReset(email) {
+    this.auth.sendPasswordResetEmail(email);
+  }
 
 }
 

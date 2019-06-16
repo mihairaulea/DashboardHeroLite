@@ -25,6 +25,7 @@ function signinFacebook() {
 
 function signinGoogle() {
   console.log("sign in google");
+  firebaseInstance.signInWithGoogle();
 }
 
 function displayError(message) {
@@ -87,7 +88,7 @@ function displayError(message) {
         <button
           type="button"
           class="btn cur-p btn-danger"
-          onClick={signinGoogle}
+          on:click={signinGoogle}
         >Login with Google</button>
     </div>
 

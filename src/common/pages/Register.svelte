@@ -1,13 +1,30 @@
 <script>
 
 import firebaseInstance from '../resources/firebase/index.js';
+import { navigate } from "svelte-routing";
 
 function processRegister() {
-  var user     = document.getElementById("username").value;
   var email    = document.getElementById("email").value;
   var password = document.getElementById("password").value;
+  var password2 = document.getElementById("password2").value;
 
-  console.log( firebaseInstance.createUserWithCredentials(email, password) );
+  if(password!=password2)
+    displayError("The two passwords don't match!");
+  else {
+    firebaseInstance.createUserWithCredentials(email, password).then(function() {
+        console.log("Registered");
+        //navigate to login
+        navigate("/login");
+    }).catch(function(error) {
+      console.log(error);
+      displayError(error);
+    });
+  }
+}
+
+function displayError(message) {
+  document.getElementById("errorMessage").style.display = "initial";
+  document.getElementById("errorMessage").innerHTML = message;
 }
 
 console.log("Signup");
@@ -24,11 +41,10 @@ console.log("Signup");
     </div>
     <div class="col-12 col-md-4 peer pX-40 pY-80 h-100 bgc-white scrollable pos-r" style='min-width: 320px;'>
       <h4 class="fw-300 c-grey-900 mB-40">Register</h4>
+      <div id="errorMessage" class="alert alert-danger" role="alert" style="display: none; padding:17px">
+                            Email address not valid!
+      </div>
       <div>
-        <div class="form-group">
-          <label class="text-normal text-dark">Username</label>
-          <input type="text" id="username" class="form-control" Placeholder='John Doe'>
-        </div>
         <div class="form-group">
           <label class="text-normal text-dark">Email Address</label>
           <input type="email" id="email" class="form-control" Placeholder='name@email.com'>
@@ -39,11 +55,11 @@ console.log("Signup");
         </div>
         <div class="form-group">
           <label class="text-normal text-dark">Confirm Password</label>
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" id="password2" class="form-control" placeholder="Password">
         </div>
         <div class="form-group">
           <button on:click={processRegister} class="btn btn-primary">Register</button>
         </div>
       </div>
     </div>
-  </div>
+</div>
