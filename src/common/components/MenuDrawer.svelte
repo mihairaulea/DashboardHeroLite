@@ -76,11 +76,12 @@ import { Link } from "svelte-routing";
         </a>
       </li>
       <li class="nav-item">
-        <a class='sidebar-link' href="charts.html">
+        <a class='sidebar-link'>
           <span class="icon-holder">
             <i class="c-indigo-500 ti-bar-chart"></i>
           </span>
-          <span class="title">Charts</span>
+          <span class="title">
+            <Link to="charts">Charts</Link></span>
         </a>
       </li>
       <li class="nav-item">

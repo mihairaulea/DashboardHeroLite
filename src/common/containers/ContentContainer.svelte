@@ -10,6 +10,7 @@ import CalendarContent from '../pageContents/CalendarContent.svelte'
 import ChatContent from '../pageContents/ChatContent.svelte'
 import FormsContent from '../pageContents/FormsContent.svelte'
 import UiContent from '../pageContents/UiContent.svelte'
+import ChartContent from '../pageContents/ChartContent.svelte'
 
 
 
@@ -30,6 +31,7 @@ export let url = "";
     <Route path="forms" component="{FormsContent}" />
     <Route path="chat" component="{ChatContent}" />
     <Route path="ui" component="{UiContent}" />
+    <Route path="charts" component="{ChartContent}" />
   </div>
   </div>
 </main>
