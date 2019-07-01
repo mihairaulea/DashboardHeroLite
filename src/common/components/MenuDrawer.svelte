@@ -1,12 +1,10 @@
 <script>
-
 import { Link } from "svelte-routing";
-
 </script>
 
 <div class="sidebar">
   <div class="sidebar-inner">
-    <!-- ### $Sidebar Header ### -->
+    <!-- ### jQuerySidebar Header ### -->
     <div class="sidebar-logo">
       <div class="peers ai-c fxw-nw">
         <div class="peer peer-greed">
@@ -32,7 +30,7 @@ import { Link } from "svelte-routing";
         </div>
       </div>
     </div>
-    <!-- ### $Sidebar Menu ### -->
+    <!-- ### jQuerySidebar Menu ### -->
     <ul class="sidebar-menu scrollable pos-r">
 
       <li class="nav-item mT-30 actived">

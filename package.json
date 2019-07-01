@@ -29,6 +29,7 @@
     "brand-colors": "^2.0.1",
     "chart.js": "^2.8.0",
     "firebase": "^5.9.3",
+    "jquery": "^3.4.1",
     "npm-reinstall": "^3.1.0",
     "perfect-scrollbar": "^1.4.0",
     "svelte-routing": "^1.2.0"

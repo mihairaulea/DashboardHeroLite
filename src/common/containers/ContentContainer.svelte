@@ -11,7 +11,73 @@ import ChatContent from '../pageContents/ChatContent.svelte'
 import FormsContent from '../pageContents/FormsContent.svelte'
 import UiContent from '../pageContents/UiContent.svelte'
 import ChartContent from '../pageContents/ChartContent.svelte'
+import jQuery from "jQuery";
+import { onMount } from 'svelte';
 
+onMount(() => {
+
+jQuery('.dropdown').on('click', function () {
+  console.log("click on dropdown class");
+  const $this = jQuery(this);
+  if($this.hasClass('show'))
+    $this.removeClass('show');
+  else
+    $this.addClass('show');
+});
+
+// Sidebar links
+jQuery('.sidebar .sidebar-menu li a').on('click', function () {
+    const $this = jQuery(this);
+    if ($this.parent().hasClass('open')) {
+      $this
+        .parent()
+        .children('.dropdown-menu')
+        .slideUp(200, () => {
+          $this.parent().removeClass('open');
+        });
+    } else {
+      $this
+        .parent()
+        .parent()
+        .children('li.open')
+        .children('.dropdown-menu')
+        .slideUp(200);
+
+      $this
+        .parent()
+        .parent()
+        .children('li.open')
+        .children('a')
+        .removeClass('open');
+
+      $this
+        .parent()
+        .parent()
+        .children('li.open')
+        .removeClass('open');
+
+      $this
+        .parent()
+        .children('.dropdown-menu')
+        .slideDown(200, () => {
+          $this.parent().addClass('open');
+        });
+    }
+  });
+
+  jQuery('.sidebar-toggle').on('click', e => {
+    console.log("click");
+    jQuery('.app').toggleClass('is-collapsed');
+    e.preventDefault();
+  });
+
+  jQuery('#sidebar-toggle').click(e => {
+    e.preventDefault();
+    setTimeout(() => {
+      window.dispatchEvent(window.EVENT);
+    }, 300);
+  });
+});
 
 
 export let url = "";
@@ -37,5 +103,4 @@ export let url = "";
 </main>
 </div>
 </div>
-
 </Router>
