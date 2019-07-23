@@ -62,8 +62,6 @@ window.addEventListener('load', function load() {
 });
 </script>
 <body class="app">
-<ContentContainer />
-<!-- UNCOMMENT BEFORE DEPLOY
 	{#if loggedIn}
 	<ContentContainer />
 	{/if}
@@ -71,7 +69,6 @@ window.addEventListener('load', function load() {
 	{#if !loggedIn}
 	<UserContainer bind:loggedIn={loggedIn}/>
 	{/if}
-	-->
 
 <div id='loader'>
 	<div class="spinner"></div>

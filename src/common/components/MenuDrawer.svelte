@@ -8,11 +8,11 @@ import { Link } from "svelte-routing";
     <div class="sidebar-logo">
       <div class="peers ai-c fxw-nw">
         <div class="peer peer-greed">
-          <a class="sidebar-link td-n" href="index.html">
+          <a class="sidebar-link td-n" href="javascript:void(0);">
             <div class="peers ai-c fxw-nw">
               <div class="peer">
                 <div class="logo">
-                  <img src="assets/static/images/logo.png" alt="">
+                  <img src="assets/static/images/logo.jpg" alt="">
                 </div>
               </div>
               <div class="peer peer-greed">
@@ -83,7 +83,7 @@ import { Link } from "svelte-routing";
         </a>
       </li>
       <li class="nav-item">
-        <a class='sidebar-link' href="forms.html">
+        <a class='sidebar-link' href="javascript:void(0);">
           <span class="icon-holder">
             <i class="c-light-blue-500 ti-pencil"></i>
           </span>
@@ -91,7 +91,7 @@ import { Link } from "svelte-routing";
         </a>
       </li>
       <li class="nav-item dropdown">
-        <a class="sidebar-link" href="ui.html">
+        <a class="sidebar-link" href="javascript:void(0);">
           <span class="icon-holder">
               <i class="c-pink-500 ti-palette"></i>
             </span>
@@ -110,10 +110,10 @@ import { Link } from "svelte-routing";
         </a>
         <ul class="dropdown-menu">
           <li>
-            <a class='sidebar-link' href="basic-table.html">Basic Table</a>
+            <a class='sidebar-link' href="javascript:void(0);">Basic Table</a>
           </li>
           <li>
-            <a class='sidebar-link' href="datatable.html">Data Table</a>
+            <a class='sidebar-link' href="javascript:void(0);">Data Table</a>
           </li>
         </ul>
       </li>
@@ -129,19 +129,19 @@ import { Link } from "svelte-routing";
         </a>
         <ul class="dropdown-menu">
           <li>
-            <a class='sidebar-link' href="blank.html">Blank</a>
+            <a class='sidebar-link' href="javascript:void(0);">Blank</a>
           </li>
           <li>
-            <a class='sidebar-link' href="404.html">404</a>
+            <a class='sidebar-link' href="javascript:void(0);">404</a>
           </li>
           <li>
-            <a class='sidebar-link' href="500.html">500</a>
+            <a class='sidebar-link' href="javascript:void(0);">500</a>
           </li>
           <li>
-            <a class='sidebar-link' href="signin.html">Sign In</a>
+            <a class='sidebar-link' href="javascript:void(0);">Sign In</a>
           </li>
           <li>
-            <a class='sidebar-link' href="signup.html">Sign Up</a>
+            <a class='sidebar-link' href="javascript:void(0);">Sign Up</a>
           </li>
         </ul>
       </li>
