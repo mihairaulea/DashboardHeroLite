@@ -1,7 +1,7 @@
-import firebase from 'firebase/app';
-import auth from 'firebase/auth';
-import 'firebase/firestore';
-import 'firebase/database';
+import firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/firestore";
+import "firebase/database";
 
 const config = {
   apiKey: "AIzaSyCYAKG5MlCPtAuaVL11VBwLfp9VmvzSikM",
@@ -14,13 +14,12 @@ const config = {
 };
 
 class FirebaseClass {
-
   constructor() {
-   this.app = firebase.initializeApp(config);
-   this.db = firebase.firestore();
-   this.auth = this.app.auth();
-   this.isLoaded = false;
- }
+    this.app = firebase.initializeApp(config);
+    this.db = firebase.firestore();
+    this.auth = this.app.auth();
+    this.isLoaded = false;
+  }
 
   getCurrentUserId() {
     return this.app.auth().currentUser;
@@ -28,28 +27,28 @@ class FirebaseClass {
   // New user registration with Email + Password
   createUserWithCredentials(email, password) {
     return this.auth.createUserWithEmailAndPassword(email, password);
-  };
+  }
 
   // Authentication
   signInWithCredentials(email, password) {
     return this.auth.signInWithEmailAndPassword(email, password);
-  };
+  }
 
   // Authentication Google
   signInWithGoogle() {
     const provider = new firebase.auth.GoogleAuthProvider();
-    provider.addScope('https://www.googleapis.com/auth/gmail.compose');
+    provider.addScope("https://www.googleapis.com/auth/gmail.compose");
     return this.auth.signInWithPopup(provider);
-  };
+  }
 
   // Authentication Facebook
   signInWithFacebook() {
     const provider = new firebase.auth.FacebookAuthProvider();
     return this.auth.signInWithPopup(provider);
-  };
+  }
 
   // User sign out
-  signout() {
+  signOut() {
     this.auth.signOut();
   }
 
@@ -57,7 +56,6 @@ class FirebaseClass {
   passwordReset(email) {
     this.auth.sendPasswordResetEmail(email);
   }
-
 }
 
 const firebaseInstance = new FirebaseClass();
