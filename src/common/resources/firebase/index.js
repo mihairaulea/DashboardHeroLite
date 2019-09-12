@@ -3,6 +3,7 @@ import auth from 'firebase/auth';
 import 'firebase/firestore';
 import 'firebase/database';
 
+// replace this with your credentials
 const config = {
   apiKey: "AIzaSyCYAKG5MlCPtAuaVL11VBwLfp9VmvzSikM",
   authDomain: "dashboardhero-c056c.firebaseapp.com",

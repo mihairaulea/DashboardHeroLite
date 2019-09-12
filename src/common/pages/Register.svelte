@@ -23,7 +23,7 @@ function processRegister() {
 }
 
 function displayError(message) {
-  document.getElementById("errorMessage").style.display = "initial";
+  document.getElementById("errorMessage").style.display = "flex";
   document.getElementById("errorMessage").innerHTML = message;
 }
 
@@ -41,7 +41,7 @@ console.log("Signup");
     </div>
     <div class="col-12 col-md-4 peer pX-40 pY-80 h-100 bgc-white scrollable pos-r" style='min-width: 320px;'>
       <h4 class="fw-300 c-grey-900 mB-40">Register</h4>
-      <div id="errorMessage" class="alert alert-danger" role="alert" style="display: none; padding:17px">
+      <div id="errorMessage" class="alert alert-danger" role="alert" style="display: none;">
                             Email address not valid!
       </div>
       <div>
