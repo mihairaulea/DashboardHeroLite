@@ -14,7 +14,15 @@ Build your admin dashboard this week, and start selling!
 
 1. Fully functional user management
 
-![User login] (https://media.giphy.com/media/eGsPaNngF1Ht9AxNKT/giphy.gif)
+![User login](https://media.giphy.com/media/eGsPaNngF1Ht9AxNKT/giphy.gif)
+
+2. UI Components for most common use cases
+
+3. Pages
+
+4. Routing
+
+5. Firebase integration
 
 ## Getting Started
 
