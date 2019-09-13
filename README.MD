@@ -6,7 +6,15 @@ React and Angular are sharp tools, that unexperienced developers can cut themsel
 
 That's 99% of the market.
 
-We aim to help small to medium sized startups scale their SaaS business fast, by providing a user management, UI and billing solution that's easy to extend and customize.
+We help small to medium sized startups scale their SaaS business fast, by providing a user management, UI and billing solution that's easy to extend and customize.
+
+Build your admin dashboard this week, and start selling!
+
+# Features
+
+1. Fully functional user management
+
+![User login] (https://media.giphy.com/media/eGsPaNngF1Ht9AxNKT/giphy.gif)
 
 ## Getting Started
 
